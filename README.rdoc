@@ -1,11 +1,10 @@
-== README
+== GroopiePets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails web app about pets.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 2.2.3p173
 
 * System dependencies
 
