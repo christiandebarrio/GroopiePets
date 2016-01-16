@@ -6,8 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-users = User.create([
-  { name: 'chris', email: 'chris@email.com', password: 'foopasschris' },
-  { name: 'ana', email: 'ana@email.com', password: 'foopassiron' },
-  { name: 'iron', email: 'iron@email.com', password: 'foopassiron' }
-])
+users = ['chris', 'ana', 'iron']
+
+users.each do |user|
+  user = User.create( name: user, email: user + '@email.com', password: 'foopass' + user )
+  Pet.create( name: user.name + 'pet', species: 'dog', age: rand(10), user_id: user.id)
+end
+
