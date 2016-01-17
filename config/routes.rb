@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   root to: "pets#index"
 
   resources :users, only: [ :show ] do
-    resources :pets, only: [ :new, :create, :edit, :destroy ]
+    resources :pets, only: [ :new, :create, :edit, :destroy, :index ]
   end
+
+  # resources :pets, only: [ :index, :create ]
 
 
   # The priority is based upon order of creation: first created -> highest priority.

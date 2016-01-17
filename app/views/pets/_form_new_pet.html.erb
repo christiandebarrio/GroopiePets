@@ -1,0 +1,29 @@
+<%= flash_message %>
+
+<% if @pet.errors.any? %>
+  <ul class="flash-errors">
+    <% @pet.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for [@user, @pet] do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+  </div>
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save' %>
+    <%= link_to("Cancel", root_path) %>
+  </div>
+<% end %>
