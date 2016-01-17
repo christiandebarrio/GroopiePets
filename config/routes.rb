@@ -7,9 +7,6 @@ Rails.application.routes.draw do
     resources :pets, only: [ :new, :create, :edit, :destroy, :index ]
   end
 
-  # resources :pets, only: [ :index, :create ]
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
