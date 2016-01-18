@@ -1,1 +1,7 @@
-<h1><%= @user.name%></h1>
+<header>
+  <h1><%= @user.name%> pets <%= link_to '+ Add new pet', new_user_pet_path(current_user), class: "btn btn-success" %></h1>
+</header>
+
+<div class="pets-list">
+  <%= render 'user_pet_panel' %>
+</div>

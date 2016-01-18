@@ -1,8 +1,12 @@
-<div class="login">
-  <% if user_signed_in? %>
-    <h2>Hello, <%= current_user.name%>!</h2>
-    <%= link_to 'Logout', destroy_user_session_path, method: 'DELETE', class: "btn btn-danger" %>
-  <% else %>
-    <%= link_to 'Login', new_user_session_path, method: 'GET', class: "btn btn-succes" %>
-  <% end %>
+<div class="container user-login">
+  <p class="navbar-text pull-right">
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    <% end %>
+  </p>
 </div>
