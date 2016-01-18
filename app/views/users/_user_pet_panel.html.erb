@@ -1,0 +1,14 @@
+<% @pets.each do |pet| %>
+  <div class="panel panel-success pet-panel">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= pet.name %></h3>
+    </div>
+    <div class="panel-body">
+      <p><%= pet.species %></p>
+      <p><%= pet.age %> years old</p>
+      <%= link_to 'Edit', edit_user_pet_path(current_user, pet), class: "btn btn-default" %>
+      <%= link_to 'Delete', user_pet_path(current_user, pet), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+    </div>
+  </div>
+<% end %>
+      

@@ -1,0 +1,10 @@
+<% @pets.each do |pet| %>
+  <div class="panel panel-success pet-panel">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= pet.name %></h3>
+    </div>
+    <div class="panel-body">
+      <p><%= pet.species %></p>
+    </div>
+  </div>
+<% end %>
