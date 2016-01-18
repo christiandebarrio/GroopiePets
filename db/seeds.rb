@@ -6,10 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-users = ['chris', 'ana', 'iron']
+users = ["Chris", "Anna", "Iron"]
 
-users.each do |user|
-  user = User.create( name: user, email: user + '@email.com', password: 'foopass' + user )
-  Pet.create( name: user.name + 'pet', species: 'dog', age: rand(10), user_id: user.id)
+users.each do |name|
+  puts "creating user #{name}"
+  user = User.create( name: name, email: name + "@email.com", password: "foopass" + name )
+  puts "creating pet for #{name} with name #{name}Pet"
+  Pet.create( name: user.name + "Pet", species: "Dog", age: rand(10), user_id: user.id)
 end
 

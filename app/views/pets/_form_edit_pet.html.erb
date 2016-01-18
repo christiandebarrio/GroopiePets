@@ -7,7 +7,7 @@
 <% end %>
 
 
-<%= form_for [@user, @pet] do |f| %>
+<%= form_for [@user, @pet], html: { multipart: true } do |f| %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -19,6 +19,11 @@
   <div class="field">
     <%= f.label :age %>
     <%= f.text_field :age %>
+  </div>
+  <div class="avatar">
+    <%= f.label :avatar %>
+    <%= image_tag @pet.avatar.url(:medium) %>
+    <%= f.file_field :avatar %>
   </div>
   <div class="actions">
     <%= f.submit 'Update' %>

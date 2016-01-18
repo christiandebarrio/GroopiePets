@@ -4,6 +4,7 @@
       <h3 class="panel-title"><%= pet.name %></h3>
     </div>
     <div class="panel-body">
+      <%= image_tag pet.avatar.url(:thumb) %>
       <p><%= pet.species %></p>
     </div>
   </div>
