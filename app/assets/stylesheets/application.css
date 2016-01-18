@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+body {
+  padding-top: 80px;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+table, td, th {
+  vertical-align: middle; border: none;
+}
+
+th {
+  border-bottom: 1px solid #DDD;
+}
+
+.message.notice {
+  color: #5CB85C;
+}
+
+.message.alert {
+  color: #D9534F;
+}
+
+.flash-errors li {
+  color: #D9534F;
+}
