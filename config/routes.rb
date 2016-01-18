@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pets#index"
 
-  resources :users, only: [ :show ] do
-    resources :pets, only: [ :new, :create, :edit, :destroy, :index ]
+  resources :users, only: [ :index, :show ] do
+    resources :pets, only: [ :new, :create, :edit, :update, :destroy ]
   end
+
+  resources :pets, only: :index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
