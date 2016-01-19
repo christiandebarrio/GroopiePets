@@ -43,3 +43,7 @@ th {
 .flash-errors li {
   color: #D9534F;
 }
+
+.panel-pet-title {
+  cursor: pointer;
+}

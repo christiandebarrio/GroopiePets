@@ -53,6 +53,15 @@ class PetsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def info
+    @pet = Pet.find_by_id(params[:id])
+    if @pet
+      render json: @pet
+    else
+      render status: 404, json: {error: "No info"}
+    end
+  end
+
   private
 
   def pet_params
