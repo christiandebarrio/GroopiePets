@@ -1,10 +1,14 @@
 <% @pets.each do |pet| %>
-  <div class="panel panel-success pet-panel">
-    <div class="panel-heading">
-      <h3 class="panel-title panel-pet-title" data-id="<%= pet.id %>"><%= pet.name %></h3>
-    </div>
-    <div class="panel-body">
-      <%= image_tag pet.avatar.url(:medium) %>
+  <div class="col-sm-3">
+    <div class="panel panel-success pet-panel">
+      <div class="panel-heading">
+        <h3 class="panel-title panel-pet-title" data-id="<%= pet.id %>"><%= pet.name %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="pet-image">
+          <%= image_tag pet.avatar.url(:medium) %>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>
