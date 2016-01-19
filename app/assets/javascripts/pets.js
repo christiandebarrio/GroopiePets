@@ -8,7 +8,7 @@ $(document).ready(function() {
     event.preventDefault();
     var petId = event.currentTarget.getAttribute("data-id");
 
-    var request = $.get("/pet/" + petId + "/info");
+    var request = $.get("api/pet/" + petId + "/info");
 
     function onRequestSuccess (response) {     
       console.log(response);
